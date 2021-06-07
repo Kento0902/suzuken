@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   end
   root 'posts#index'
   post 'posts' => 'posts#create'
-  get 'posts/:id' => 'posts#show',as: 'post'
+  get 'posts/:id' => 'posts#show',as: 'tweet'
   resources :replies, only: [:create]
 end

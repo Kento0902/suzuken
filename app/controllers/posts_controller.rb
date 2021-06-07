@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show]
   def index
     if params[:search] != nil && params[:search] != ''
       #部分検索かつ複数検索
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
         @post = Post.new
       end
     def create
-        post = Post.new(tweet_params)
+        post = Post.new(post_params)
         post.user_id = current_user.id
         if post.save
           redirect_to :action => "index"
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     end
     
      private
-      def tweet_params
-        params.require(:post).permit(:comment, :title)
+      def post_params
+        params.require(:post).permit(:reply, :title)
       end
 end

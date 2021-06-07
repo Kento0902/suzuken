@@ -1,0 +1,17 @@
+<h1>GeekBurger</h1>
+<h3>新規burger</h3>
+<%= form_for @post do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, :size => "50x10" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", posts_path %>

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :users, only: [:show]
   resources :posts do
     resources :likes, only: [:create, :destroy]
+    resources :replies, only: [:create]
+    root 'posts#index'
   end
-  root 'posts#index'
-  post 'posts' => 'posts#create'
-  get 'posts/:id' => 'posts#show',as: 'tweet'
-  resources :replies, only: [:create]
 end

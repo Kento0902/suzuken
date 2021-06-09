@@ -3,6 +3,7 @@
 <div class="post">
   <p><%= @post.comment %></p>
   <p><%= @post.title %></p>
+  <p><%= @post.picture %></p>
   <p><%= @post.created_at %></p>
   <% if user_signed_in? %>
   <% if current_user.already_liked?(@post) %>

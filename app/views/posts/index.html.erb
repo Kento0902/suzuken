@@ -14,7 +14,7 @@
     <div class="tweet">
     <%= t.user.email %>
     <%= t.title %>
-    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= picture_tag t.picture_url, size: "250x200" if t.picture? %>
       <%= t.comment %>
       <% if user_signed_in? %>
       <% if current_user.already_liked?(t) %>

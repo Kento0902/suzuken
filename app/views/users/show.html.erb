@@ -1,4 +1,4 @@
-<h1>users</h1>
+<h1>ユーザーページ</h1>
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>
 <p>プロフィール : <%= @user.profile %></p>
@@ -9,15 +9,26 @@
 
 <h2>ユーザーの投稿一覧</h2>
 <% @user.posts.each do |t| %>
+  <div class="tweet">
   <%= t.user.name %>
   <%= t.title %>
   <%= t.comment %>
+  </div>
+<% end %>
+
+<h2>ユーザーのアルバム</h2>
+<% @user.posts.each do |t| %>
+  <%= image_tag t.picture_url, size: "250x200" if t.picture? %>
 <% end %>
 
 <!-- 以下はいいね機能を実装している場合-->
 <h2>ユーザーがいいねした投稿一覧</h2>
 <% @user.liked_posts.each do |t| %>
+  <div class="tweet">
   <%= t.user.name %>
   <%= t.title %>
   <%= t.comment %>
+  </div>
 <% end %>
+
+<p><%= link_to "一覧に戻る", posts_path %></p>

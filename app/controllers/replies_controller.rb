@@ -7,7 +7,7 @@ class RepliesController < ApplicationController
       reply.user_id = current_user.id
       if reply.save
         flash[:success] = "コメントしました"
-        redirect_back(fallback_location: root_path)
+        redirect_back(fallback_location: post_path(post.id))
       else
         flash[:success] = "コメントできませんでした"
         redirect_back(fallback_location: root_path)

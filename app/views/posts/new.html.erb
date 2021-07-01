@@ -1,5 +1,4 @@
-<h1>GeekBurger</h1>
-<h3>新規burger</h3>
+<h1>新規投稿</h1>
 <%= form_for @post do |f| %>
   <div class="field">
     <%= f.label :title %>
@@ -7,13 +6,18 @@
   </div>
 
   <div class="field">
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
 </div>
 
   <div class="field">
     <%= f.label :comment %>
     <%= f.text_area :comment, :size => "50x10" %>
+  </div>
+
+  <div class="field">
+  <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
+  placeholder: "タグをつける。複数つけるには','で区切ってください。", :size => 50 %>
   </div>
 
   <%= f.submit "投稿する" %>

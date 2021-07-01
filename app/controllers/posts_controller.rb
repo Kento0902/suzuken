@@ -14,9 +14,11 @@ class PostsController < ApplicationController
         @post = Post.new
       end
     def create
-        post = Post.new(post_params)
-        post.user_id = current_user.id
-        if post.save
+        @post = Post.new(post_params)
+        @post.user_id = current_user.id
+        tag_list = params[:post][:tag_ids].split(',')
+        if @post.save
+          @post.save_tags(tag_list)
           redirect_to :action => "index"
         else
           redirect_to :action => "new"
@@ -26,6 +28,12 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       @replies = @post.replies
       @reply = Reply.new
+    end
+
+    def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to action: :index
     end
     
      private

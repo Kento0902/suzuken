@@ -1,9 +1,8 @@
-<h1>GeekTwitter</h1>
-<h3>Tweet一覧</h3>
+<h1>Tweet一覧</h1>
 <h3>投稿を検索</h3>
  <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
    <%= text_field_tag :search %>
-   <%= submit_tag '検索する'  %>
+   <%= submit_tag '検索する' , class:"btn btn-success" %>
 <% end %>
 <%= link_to "新規投稿へ", new_post_path %>
 <% if user_signed_in? %>
@@ -12,9 +11,10 @@
 <div class="posts-container">
   <% @posts.each do |t| %>
     <div class="tweet">
+    <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
     <%= t.user.email %>
     <%= t.title %>
-    <%= picture_tag t.picture_url, size: "250x200" if t.picture? %>
+    <%= image_tag t.picture_url, size: "250x200" if t.picture? %>
       <%= t.comment %>
       <% if user_signed_in? %>
       <% if current_user.already_liked?(t) %>
@@ -31,7 +31,7 @@
   <% end %>
       <%= t.created_at %>
       <%= link_to "詳細へ", post_path(t.id) %>
-      <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+      <%= button_to "削除する", post_path(t.id), method: :delete %>
     </div>
   <% end %>
   <% if user_signed_in? %>

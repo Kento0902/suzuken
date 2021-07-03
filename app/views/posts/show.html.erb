@@ -3,6 +3,7 @@
 <div class="post">
   <p><%= @post.comment %></p>
   <p><%= @post.title %></p>
+  <p><%= @post.states %></p>
   <p> <%= image_tag @post.picture_url, size: "250x200" if @post.picture? %></p>
   
   <h3>タグ</h3>
@@ -42,14 +43,17 @@
       <br>
   <% end %>
 
-  <% if user_signed_in? %>
-    <%= form_with(model: [@post, @reply], local: true) do |f| %>
-      <%= f.text_area :content %>
-      <%= button_tag type: "submit" do %>
-        <i class="far fa-replies"></i> コメントする
+  <% if @post.states == "読了" %>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@post, @reply], local: true) do |f| %>
+        <%= f.text_area :content %>
+        <%= button_tag type: "submit" do %>
+          <i class="far fa-replies"></i> コメントする
+        <% end %>
       <% end %>
-    <% end %>
+   <% end %>
   <% end %>
+
 </div>
 
 <%= link_to "Tweet一覧に戻る", posts_path %>

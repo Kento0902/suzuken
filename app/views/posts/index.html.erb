@@ -16,6 +16,7 @@
     <%= t.title %>
     <%= image_tag t.picture_url, size: "250x200" if t.picture? %>
       <%= t.comment %>
+      <%= t.states %>
       <% if user_signed_in? %>
       <% if current_user.already_liked?(t) %>
           <%= link_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>

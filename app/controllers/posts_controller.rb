@@ -28,6 +28,8 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
       @replies = @post.replies
       @reply = Reply.new
+     
+     
     end
 
     def destroy
@@ -38,6 +40,6 @@ class PostsController < ApplicationController
     
      private
       def post_params
-        params.require(:post).permit(:comment, :title, :picture)
+        params.require(:post).permit(:comment, :title, :picture, :states)
       end
 end

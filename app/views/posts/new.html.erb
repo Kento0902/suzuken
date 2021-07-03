@@ -16,6 +16,13 @@
   </div>
 
   <div class="field">
+  <%= f.label :states %>
+  <%= f.select :states, 
+  [["購入", "購入"], 
+  ["読了", "読了"]], include_blank: "選択して下さい" %>
+</div>
+
+  <div class="field">
   <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
   placeholder: "タグをつける。複数つけるには','で区切ってください。", :size => 50 %>
   </div>

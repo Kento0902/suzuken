@@ -1,4 +1,26 @@
 <%= stylesheet_link_tag 'hello', :media => "all" %>
 
-トップページ
-<h1>Comic Pic<h1>
+<div class="title">
+<h1>Comic Pic</h1>
+</div>
+
+<div class='hello_button'>
+<li><%= link_to "新規登録", new_user_registration_path, class:"btn-horizontal-border"%></li>
+<li><%= link_to "ログイン", new_user_session_path, class:"btn-horizontal-border"%></li>
+</div>
+
+<div class="intro">
+<h1>Comic Pic とは？</h1>
+</div>
+
+<div class="examin">
+    <div class="examin1">
+        <h3>みんなが持っている漫画を見てみよう！<h3>
+    </div>
+    <div class='examin2'>
+    <h3>漫画の写真を投稿しよう！<h3>
+    </div>
+    <div class='examin3'>
+    <h3>自分の好きな漫画を検索しよう！<h3>
+    </div>
+</div>

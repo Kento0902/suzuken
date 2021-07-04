@@ -1,3 +1,130 @@
 // Place all the styles related to the hello controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .title {
+    color: rgb(156, 9, 9);
+    background-color: #0b9138;
+    height: 300px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title h1 {
+    margin: auto;
+    font-size:120px;
+  }
+
+
+
+  .btn-horizontal-border {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 0 8px;
+    text-decoration: none;
+    color: #67c5ff;
+    transition: .4s;
+  }
+
+  .btn-horizontal-border:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:100%;
+    left: 0;
+    border-radius: 3px;
+    background:#67c5ff;
+    transition: .2s;
+  }
+  
+  .btn-horizontal-border:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top:0;
+    left: 0;
+    border-radius: 3px;
+    background:#67c5ff;
+    transition: .2s;
+  }
+  
+  .btn-horizontal-border:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+  }
+  
+  .btn-horizontal-border:hover:after {
+    top: 3px;
+  }
+
+  .hello_button{
+    width: 1000px;
+    height: 170px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hello_button li{
+    width: 500px;
+ float: left;
+ list-style: none;
+ margin-left: auto;
+ margin-right: auto;
+ text-align:center;
+  padding:20px 10px;
+  font-size:70px;
+  }
+
+  .hello_button li:nth-child(2){
+    letter-spacing: 5px;
+  }
+
+  .intro {
+    color: rgb(156, 9, 9);
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro h1 {
+    margin: auto;
+    font-size:120px;
+  }
+
+  .examin {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .examin1 {
+    background-color: white;
+    height: 100px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

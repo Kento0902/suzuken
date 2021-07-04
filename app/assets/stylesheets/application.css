@@ -22,6 +22,8 @@
 body {
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    height: 100%;
+    margin: 0;
 }
 header {
   background-color: #00acee;
@@ -51,6 +53,8 @@ header li {
   list-style: none;
   margin-right: 40px;
 }
+main {
+}
 footer {
   color: white;
   height: 30px;
@@ -59,5 +63,4 @@ footer {
   width: 100%;
   display: flex;
   align-items: center;
-  
 }

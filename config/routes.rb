@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :replies, only: [:create]
     
   end
-  root 'posts#index'
+  root 'hello#index'
 
 end

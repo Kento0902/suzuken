@@ -108,7 +108,7 @@
 
   .examin {
     background-color: white;
-    height: 300px;
+    height: 850px;
     width: 100%;
     font-weight: bold;
     display: flex;
@@ -118,11 +118,60 @@
   }
 
   .examin1 {
-    background-color: white;
+    background-color: rgb(219, 198, 198);
+    height: 250px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detail1 h3 {
     height: 100px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:50px;
+  }
+  .more_detail1 {
+    height: 100px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+  }
+  .examin2 {
+    background-color: rgb(183, 228, 236);
+    height: 250px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .examin3 {
+    background-color: rgb(183, 236, 211);
+    height: 250px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;

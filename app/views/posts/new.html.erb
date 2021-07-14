@@ -1,4 +1,6 @@
+<%= stylesheet_link_tag 'form', :media => "all" %>
 <h1>新規投稿</h1>
+<div class="post-container">
 <%= form_for @post do |f| %>
   <div class="field">
     <%= f.label :title %>
@@ -12,7 +14,8 @@
 
   <div class="field">
     <%= f.label :comment %>
-    <%= f.text_area :comment, :size => "50x10" %>
+    <%= f.text_area :comment, :size => "30x5" %>
+    <!-- 230字以内にしたい -->
   </div>
 
   <div class="field">
@@ -22,12 +25,12 @@
   ["読了", "読了"]], include_blank: "選択して下さい" %>
 </div>
 
-  <div class="field">
+ <!-- <div class="field">
   <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
   placeholder: "タグをつける。複数つけるには','で区切ってください。", :size => 50 %>
-  </div>
+  </div> 
+  -->
 
   <%= f.submit "投稿する" %>
 <% end %>
-
-<%= link_to "一覧に戻る", posts_path %>
+</div>

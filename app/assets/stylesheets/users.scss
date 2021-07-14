@@ -1,3 +1,58 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+.user_all{
+    height: 100%;
+    width:75%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.user_top{
+    height: auto;
+    width: 100%;
+    font-size: 40px;
+}
+.user_top_pro{
+    font-size: 40px;
+}
+.user_top_com{
+    width: 100px;
+    margin-left: auto;
+    margin-right: 0px;
+    list-style: none;
+}
+.user_item{
+    width: 100%;
+}
+.user_item h2{
+    text-align: center;
+    font-size: 35px;
+}
+.user_post{
+    font-size: 60px;
+}
+.user_post a{
+    float: right;
+}
+.user_post_state{
+    height: 100%;
+    float: left;
+}
+.user_album{
+    text-align: center;
+}
+.user_album h2{
+    text-align: center;
+    font-size: 35px;
+}
+.user_album img{
+    padding: 20px;
+    text-align: center;
+}

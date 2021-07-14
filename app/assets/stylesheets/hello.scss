@@ -7,19 +7,31 @@
     margin: 0;
   }
   .title {
-    color: rgb(156, 9, 9);
-    background-color: #0b9138;
-    height: 300px;
-    width: 100%;
+    font-family: "Ludica Sans Unicode";
+    width: 800px;
+    background-color:rgb(35, 46, 28);
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
-    display: flex;
+    display:flex;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
   }
-
   .title h1 {
+    height: auto;
     margin: auto;
     font-size:120px;
+    color: rgb(248, 112, 248);
+    filter: drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000) drop-shadow(1px 0 #000);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(233, 233, 233);
+  }
+  .title h2 {
+    margin: auto;
+    font-size:90px;
+    color: rgb(255, 166, 0);
   }
 
 
@@ -73,6 +85,7 @@
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
   }
 
   .hello_button li{
@@ -90,9 +103,16 @@
     letter-spacing: 5px;
   }
 
+  .hello_main{
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid rgb(119, 191, 255);
+    border-width: 10px;;
+  }
   .intro {
     color: rgb(156, 9, 9);
-    background-color: white;
+    background-color: rgb(229, 255, 188);
     height: 150px;
     width: 100%;
     font-weight: bold;
@@ -107,7 +127,7 @@
   }
 
   .examin {
-    background-color: white;
+    
     height: 850px;
     width: 100%;
     font-weight: bold;

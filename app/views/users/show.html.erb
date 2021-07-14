@@ -1,34 +1,51 @@
-<h1>ユーザーページ</h1>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>プロフィール : <%= @user.profile %></p>
-
-<% if current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_registration_path %>
-<% end %>
-
-<h2>ユーザーの投稿一覧</h2>
-<% @user.posts.each do |t| %>
-  <div class="tweet">
-  <%= t.user.name %>
-  <%= t.title %>
-  <%= t.comment %>
+<%= stylesheet_link_tag 'users', :media => "all" %>
+<div class="user_all">
+  <div class="user_top">
+    <div class="user_top_pro">
+      <p>name :</p>
+      <p><%= @user.name %></p>
+      <p>profile :</p>
+      <p><%= @user.profile %></p>
+    </div>
+    <div class="user_top_com">
+      <% if current_user.id == @user.id %>
+        <%= link_to "編集", edit_user_registration_path %>
+      <% end %>
+      <% if user_signed_in? %>
+        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "新規登録", new_user_registration_path %></li>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+    </div>
   </div>
-<% end %>
-
-<h2>ユーザーのアルバム</h2>
-<% @user.posts.each do |t| %>
-  <%= image_tag t.picture_url, size: "250x200" if t.picture? %>
-<% end %>
-
-<!-- 以下はいいね機能を実装している場合-->
-<h2>ユーザーがいいねした投稿一覧</h2>
-<% @user.liked_posts.each do |t| %>
-  <div class="tweet">
-  <%= t.user.name %>
-  <%= t.title %>
-  <%= t.comment %>
+  <div class="user_item">
+    <h2><%= @user.name %>の投稿一覧</h2>
+    <% @user.posts.each do |t| %>
+    <div class="user_post">
+      <div class="user_post_state">
+        <%= t.states %>
+      </div>
+      <%= t.title %>
+      <a href="/posts/<%= t.id %>">詳細</a>
+    </div>
+    <% end %>
   </div>
-<% end %>
+  <div class="user_album">
+    <h2>ユーザーのアルバム</h2>
+    <% @user.posts.each do |t| %>
+      <%= image_tag t.picture_url, size: "500x400" if t.picture? %>
+    <% end %>
+  </div>
 
-<p><%= link_to "一覧に戻る", posts_path %></p>
+  <!-- 以下はいいね機能を実装している場合-->
+  <!--<h2>ユーザーがいいねした投稿一覧</h2>
+  <% @user.liked_posts.each do |t| %>
+    <div class="tweet">
+    <%= t.user.name %>
+    <%= t.title %>
+    <%= t.comment %>
+    </div>
+  <% end %> -->
+
+</div>

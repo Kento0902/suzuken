@@ -24,6 +24,8 @@ body {
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
     height: 100%;
     margin: 0;
+    
+  background-color: rgb(229, 255, 188);
 }
 header {
   background-color: #00acee;
@@ -54,13 +56,16 @@ header li {
   margin-right: 40px;
 }
 main {
+  background-color: rgb(229, 255, 188);
+
 }
 footer {
   color: white;
   height: 30px;
   background-color: #000;
-  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
+  position: relative;
+  bottom: 0;
 }

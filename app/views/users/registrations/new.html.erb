@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag 'form', :media => "all" %>
 <h2>Sign up</h2>
-
+<div class="post-container">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -33,3 +34,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>

@@ -54,37 +54,37 @@
   </div>
   <div class="show_reply">
     <% if @post.states == "読了" %>
-    <div class="show_reply_text">
-      <b>コメント</b>
-    </div>
-    <% @replies.each do |c| %>
-    <div class="show_reply_main">
-      <div class="show_reply_main_name">
-        <i class="far fa-id-badge"></i>
-        <%= c.user.name unless c.user.blank? %>
+      <div class="show_reply_text">
+        <b>コメント</b>
       </div>
-      <div class="show_reply_main_con">
-        <%= c.content %>
-        <% end %>
-        
+      <% @replies.each do |c| %>
+        <div class="show_reply_main">
+          <div class="show_reply_main_name">
+            <i class="far fa-id-badge"></i>
+            <%= c.user.name unless c.user.blank? %>
+          </div>
+          <div class="show_reply_main_con">
+            <%= c.content %>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="show_reply_form">
-      <% if user_signed_in? %>
-      <%= form_with(model: [@post, @reply], local: true) do |f| %>
-        <%= f.text_area :content %>
-        <%= button_tag type: "submit" do %>
-          <i class="far fa-replies"></i> コメントする
-        <% end %>
       <% end %>
-    </div>
-    <% end %>
+      <div class="show_reply_form">
+        <% if user_signed_in? %>
+        <%= form_with(model: [@post, @reply], local: true) do |f| %>
+          <%= f.text_area :content, :size => "30x2" %>
+          <%= button_tag type: "submit" do %>
+            <i class="far fa-replies"></i> コメントする
+          <% end %>
+        <% end %>
+      </div>
+      <% end %>
     <% else %>
-    <b>コメントは’読了’にだけできます</b>
+      <b>コメントは’読了’にだけできます</b>
     <% end %>
   </div>
-</div>
-<div class="show_delete">
-  <%= button_to "削除する", post_path(@post.id), method: :delete %>
+  <div class="show_delete">
+  　<% if user_signed_in? && current_user.id == @post.user_id %>
+      <%= button_to "投稿削除", post_path(@post.id), method: :delete, class:"btn-flat-border" %>
+    <% end %> 
+  </div>
 </div>

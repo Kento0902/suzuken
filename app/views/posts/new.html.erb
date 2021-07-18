@@ -1,36 +1,49 @@
 <%= stylesheet_link_tag 'form', :media => "all" %>
-<h1>新規投稿</h1>
+<div class="new_title">
+  <h1>新規投稿</h1>
+</div>
 <div class="post-container">
-<%= form_for @post do |f| %>
+  <%= form_for @post do |f| %>
+    <div class="field">
+      <%= f.label :タイトル %>
+      <%= f.text_field :title, :size => 30 %>
+    </div>
+
+    <div class="field">
+      <div class="new_picture_form">
+        <%= f.label :写真 %>
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, :size => 30 %>
+    <%= f.label :状態 %>
+    <%= f.select :states, 
+    [["購入", "購入"], 
+    ["読了", "読了"]], include_blank: "選択して下さい" %>
+    <div class="new_picture_text">
+      <h4>！タイトル・写真・状態がないと投稿できません</h4>
+    </div>
   </div>
 
   <div class="field">
-  <%= f.label :picture %>
-  <%= f.file_field :picture %>
-</div>
-
-  <div class="field">
-    <%= f.label :comment %>
+    <%= f.label :コメント %>
     <%= f.text_area :comment, :size => "30x5" %>
+    <div class="new_comment_text">
+      <h4>！コメントは230文字まで入力できます</h4>
+    </div>
     <!-- 230字以内にしたい -->
   </div>
-
-  <div class="field">
-  <%= f.label :states %>
-  <%= f.select :states, 
-  [["購入", "購入"], 
-  ["読了", "読了"]], include_blank: "選択して下さい" %>
-</div>
 
  <!-- <div class="field">
   <%= f.text_field :tag_ids, class: "form-control", id:'tag_ids',\
   placeholder: "タグをつける。複数つけるには','で区切ってください。", :size => 50 %>
   </div> 
   -->
-
-  <%= f.submit "投稿する" %>
-<% end %>
+  <div class="new_submit">
+    <%= f.submit "投稿する" %>
+    <% end %>
+  </div>
+</div>
+<div class="new_bottom_space">
 </div>

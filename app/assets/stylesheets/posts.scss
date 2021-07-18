@@ -65,7 +65,6 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
     margin-top: 10px;
     align-items: center;
     display: flex;
@@ -73,7 +72,22 @@
     border-top: solid #faa871;
     border-top-width: 5px;
   }
-
+  @media screen and (max-width:1250px){
+    .top_post{
+      height: 650px;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-top: solid #faa871;
+      border-top-width: 5px;
+    }
+}
   .top_picture {
     height: 300px;
     width: 400px;
@@ -81,10 +95,12 @@
   .top_contents {
     height: 300px;
     width: 100%;
+    box-sizing:border-box;
   }
   .top_1st {
     height: 100px;
     max-width: 100%;
+    box-sizing:border-box;
   }
   .top_1st_text2 big {
     height: 100px;
@@ -112,10 +128,11 @@
     float: left;
     text-align: center;
     display: table;
-    max-width: 420px;
+    max-width: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    box-sizing:border-box;
   }
   .top_1st b {
     font-size: 35px;
@@ -152,6 +169,7 @@
     max-width: 100%;
     display: table;
     text-align: center;
+    box-sizing:border-box;
   }
   .top_2nd b {
     display: table-cell;
@@ -169,7 +187,6 @@
   }
   .top_3rd_tag {
     height: 50px;
-    width: 75%;
     float: left;
   }
   .top_3rd_tag p {
@@ -225,9 +242,24 @@ height: 20px;
     /*background-color: #ffc559;*/
     border-top: solid #faa871;
     border-top-width: 15px;
-    border-bottom: solid #3c97ff;;
-    border-bottom-width: 15px;
+    /*border-bottom: solid #3c97ff;;
+    border-bottom-width: 15px; */
     margin-top:20px ;
+  }
+  @media screen and (max-width:1000px){
+    .show_all{
+      width: 750px;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      /*margin-top: 20px;*/
+      /*background-color: #ffc559;*/
+      border-top: solid #faa871;
+      border-top-width: 15px;
+      /*border-bottom: solid #3c97ff;;
+      border-bottom-width: 15px; */
+      margin-top:20px ;
+    }
   }
   .show_title{
     width: 100%;
@@ -242,15 +274,30 @@ height: 20px;
   display: table-cell;
     vertical-align: middle;
   }
+  
   .show_main{
     margin-top: 20px;
     height: 610px;
     margin-bottom: 80px;
   }
+  @media screen and (max-width:1000px){
+    .show_main{
+      margin-top: 20px;
+      height: 780px;
+      margin-bottom: 80px;
+    }
+  }
   .show_left{
 width: 50%;
 height: 610px;
 float: left;
+  }
+  @media screen and (max-width:1000px){
+  .show_left{
+    width: 100%;
+    height: 410px;
+    display: flex;
+      }
   }
   .show_left_pic{
     width: 100%;
@@ -278,6 +325,13 @@ float: left;
     padding:       0px;    
     float: left;
   }
+  @media screen and (max-width:1000px){
+  .show_right{
+    width: 100%;
+    height: 610px;
+    float: left;
+  }
+}
   .show_right_space{
     width: 10px;
     height: 100%;
@@ -331,7 +385,7 @@ height: 50px;
   border-top-width: 15px;
   padding-top: 20px;
 }
-.fas{
+.show_user i{
   font-size: 80px;
 }
   .show_user a{
@@ -345,6 +399,11 @@ color:rgb(94, 94, 94);
   .show_reply{
     margin-top: 60px;
     width: 100%;
+    padding-bottom: 7px;
+    border-bottom: solid #3c97ff;
+    border-bottom-width: 15px;
+   /* border-top: solid #3c97ff;
+    border-top-width: 5px;*/
   }
   .show_reply_text{
     width: 100%;
@@ -359,6 +418,9 @@ color:rgb(94, 94, 94);
     }
     .show_reply_main{
       background-color: rgb(169, 241, 253);
+      border: 2px solid rgb(169, 241, 253);
+      border-radius: 25px;
+      margin: 15px;
     }
   .show_reply_main_name {
     font-size: 50px;
@@ -369,4 +431,30 @@ color:rgb(94, 94, 94);
 .show_delete input{
   font-size: 30px;
 }
+.show_reply_form{
+  font-size: 50px;
+}
+    .show_delete{
+      width: 100%;
+      padding: 10px;
+      text-align: right;
+    }
+    .show_delete button_to{
+      color: black;
+      
+    }
+    .btn-flat-border {
+      display: inline-block;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: white;
+      border: solid 2px black;
+      border-radius: 3px;
+      transition: .4s;
+      background-color: black;
+    }
     
+    .btn-flat-border:hover {
+      background: #ffffff;
+      color: rgb(255, 0, 0);
+    }

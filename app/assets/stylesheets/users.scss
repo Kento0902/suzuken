@@ -11,6 +11,7 @@
     width:75%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
 
 }
 
@@ -18,41 +19,143 @@
     height: auto;
     width: 100%;
     font-size: 40px;
+        border-top-width: 15px;
+    padding-top: 30px;
+    border-top: solid #faa871;
+    border-top-width: 15px;
 }
-.user_top_pro{
-    font-size: 40px;
+.user_top_pro i{
+    font-size: 80px;
+}
+.user_top_pro b{
+    font-size: 60px;
+}
+.user_top_pro_profile{
+    margin: 5px;
+    border: solid #00db37;
+    border-width: 7px;
 }
 .user_top_com{
     width: 100px;
     margin-left: auto;
     margin-right: 0px;
     list-style: none;
+    font-size: 30px;
 }
-.user_item{
+.user_top_edit{
+    font-size: 40px;
+    color: rgb(0, 80, 185);
+}
+.user_top_edit:hover{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 80, 185);
+}
+.btn-border-bottom:hover {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #df3535; 
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid #df3535;
+  }
+  
+  .btn-border-bottom {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #df3535;  
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid #df3535;
+  }
+  
+  
+.user_item_title{
     width: 100%;
+    margin-top: 100px;
+    /*border-top: solid #faa871;
+    border-top-width: 10px;*/
 }
-.user_item h2{
+.user_item_title h2{
     text-align: center;
-    font-size: 35px;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 185, 15);
+
 }
 .user_post{
+    width: 100%;
     font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid #00b12c;
+    border-width: 7px;
+    float: left;
 }
 .user_post a{
     float: right;
 }
 .user_post_state{
-    height: 100%;
+    font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    font-weight: 100px;
+    color: rgb(255, 207, 50);
+    text-shadow: (6px 3px 6px rgb(255, 90, 90));
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
     float: left;
 }
+.user_post_title{
+    max-width: 78%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+.user_post_more{
+    float: right;
+}
+.user_post_more a{
+    color: black;
+}
+.user_post_more a:hover{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
 .user_album{
     text-align: center;
+    border: solid rgb(231, 57, 179);
+    border-width: 7px;
 }
-.user_album h2{
+.user_album_text{
+    display: block;
+}
+.user_album_title h2{
     text-align: center;
-    font-size: 35px;
+    font-size: 100px;
+    font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    font-weight: 100px;
+    color: rgb(240, 26, 26);
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: rgb(255, 217, 0);
 }
 .user_album img{
     padding: 20px;
     text-align: center;
+}
+.user_bottom_space{
+    height: 50px;
+    padding-bottom: 30px;
+    border-top: solid #faa871;
+    border-top-width: 15px;
+    margin-top: 50px;
 }

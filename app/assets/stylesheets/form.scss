@@ -18,5 +18,55 @@
   .field {
     font-size: 32px;
     font-weight: bold;
+    margin-top: 30px;
     margin-bottom: 50px;
+  }
+  .new_title {
+    height: auto;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .new_title h1 {
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 185, 15);
+  }
+  .new_picture_form{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: table;
+  }
+  .new_picture_word{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: table;
+  }
+  .new_picture_text{
+    color: rgb(216, 0, 0);
+    margin-top: 20px;
+  }
+  .new_comment_text{
+    color: rgb(216, 0, 0);
+  }
+  .new_submit{
+    font-size: 30px;
+  }
+  .new_bottom_space{
+    height: 50px;
   }
